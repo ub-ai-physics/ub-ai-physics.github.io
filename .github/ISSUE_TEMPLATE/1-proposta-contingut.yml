@@ -1,0 +1,52 @@
+name: Proposta de contingut
+description: Proposa un contingut nou o apunta't a fer-ne un.
+title: "[Contingut] "
+labels: ["tipus: contingut-nou"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gràcies per proposar contingut! Omple el que puguis i ho parlem als comentaris.
+  - type: dropdown
+    id: producte
+    attributes:
+      label: Producte
+      options:
+        - Simulacions i objectes visuals
+        - Autoavaluació
+        - Vídeos
+        - Fitxa d'assignatura (recursos, docència)
+        - Mapa del grau (web)
+        - Estudiar amb Claude
+        - Pràctiques
+        - TFG
+        - Traduccions
+        - Altres
+    validations:
+      required: true
+  - type: input
+    id: assignatura
+    attributes:
+      label: Assignatura(es)
+      description: "Fes servir l'id de data/assignatures.json."
+      placeholder: "fisica-atomica"
+  - type: textarea
+    id: descripcio
+    attributes:
+      label: Què vols fer?
+      description: Descriu breument el contingut i què aporta.
+    validations:
+      required: true
+  - type: textarea
+    id: equip
+    attributes:
+      label: Qui hi treballa?
+      description: Usuaris de GitHub (amb @). Deixa-ho buit si busques gent.
+  - type: checkboxes
+    id: compromis
+    attributes:
+      label: Comprovacions
+      options:
+        - label: He mirat que no hi hagi ja un issue sobre això.
+          required: true
+        - label: Seguiré la guia d'estil (meta/guia-estil.md).

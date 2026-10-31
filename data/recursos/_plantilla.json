@@ -1,0 +1,23 @@
+{
+  "_ajuda": "Copia aquest fitxer com a data/recursos/<id-assignatura>.json. Esborra el que no facis servir: les seccions buides no es mostren. Vegeu meta/estructura.md.",
+  "assignatura": "id-assignatura",
+  "temes": ["Primer tema", "Segon tema"],
+  "video": { "url": "https://www.youtube.com/watch?v=...", "durada": "5 min", "autor": "" },
+  "docencia": {
+    "curs": "2026-27",
+    "actualitzat": "2026-09-01",
+    "pla_docent": "https://...",
+    "horaris": "https://...",
+    "professorat": [ { "nom": "", "grup": "", "url": "" } ]
+  },
+  "material": {
+    "apunts":       [ { "titol": "", "url": "https://...", "tema": 0, "nota": "", "autor": "" } ],
+    "problemes":    [ { "titol": "", "url": "https://...", "solucio": "https://...", "tema": 0 } ],
+    "examens":      [ { "curs": "2024-25", "convocatoria": "Final", "url": "https://...", "solucio": "" } ],
+    "bibliografia": [ { "titol": "", "url": "", "nota": "" } ]
+  },
+  "autoavaluacio": { "app": "", "preguntes": "autoavaluacio/id-assignatura.json" },
+  "extres": [
+    { "id": "laboratori", "titol": "Laboratori", "descripcio": "", "url": "", "items": [] }
+  ]
+}

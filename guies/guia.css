@@ -1,0 +1,17 @@
+/* Estil comú de les guies. Mateixos colors que ℏbar. */
+:root{ --paper:#F6F8FB; --surface:#fff; --ink:#16233F; --soft:#4A5878; --rule:#D5DDEA; --blue:#2340A8;
+  --serif:"STIX Two Text",Cambria,"Times New Roman",serif; --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif; color-scheme:light; }
+@media (prefers-color-scheme:dark){ :root{ --paper:#0F1626; --surface:#162038; --ink:#E7ECF6; --soft:#9DABC8; --rule:#2A3758; --blue:#8FA8FF; color-scheme:dark; } }
+*,*::before,*::after{ box-sizing:border-box; }
+body{ margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 var(--sans); }
+a{ color:var(--blue); }
+header{ border-bottom:1px solid var(--rule); background:var(--surface); }
+header .wrap{ display:flex; align-items:center; height:54px; }
+.brand{ font:600 1.35rem var(--serif); color:var(--ink); text-decoration:none; }
+.wrap{ max-width:760px; margin:0 auto; padding:0 20px; }
+main{ padding:36px 0 60px; }
+h1{ font:600 2rem/1.2 var(--serif); margin:0 0 12px; }
+h2{ font:600 1.25rem var(--serif); margin:32px 0 8px; }
+p, li{ max-width:68ch; }
+.obres{ border:1px dashed var(--rule); border-radius:10px; padding:14px 16px; color:var(--soft); background:var(--surface); }
+footer{ border-top:1px solid var(--rule); padding:20px 0 32px; font-size:.85rem; color:var(--soft); }

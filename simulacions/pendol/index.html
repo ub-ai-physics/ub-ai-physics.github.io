@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pèndol simple</title>
+<style>
+  :root{ --bg:#F6F8FB; --surface:#fff; --ink:#16233F; --soft:#4A5878; --rule:#D5DDEA; --accent:#2340A8; color-scheme:light; }
+  @media (prefers-color-scheme:dark){ :root{ --bg:#0F1626; --surface:#162038; --ink:#E7ECF6; --soft:#9DABC8; --rule:#2A3758; --accent:#8FA8FF; color-scheme:dark; } }
+  body{ margin:0; padding:16px; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .wrap{ max-width:660px; margin:auto; }
+  h1{ font-size:1.35rem; margin:0 0 6px; }
+  h2{ font-size:1.05rem; margin:22px 0 6px; }
+  canvas{ width:100%; height:auto; background:var(--surface); border:1px solid var(--rule); border-radius:8px; display:block; }
+  label{ display:block; margin:10px 0; }
+  input[type=range]{ width:100%; }
+  .out{ font-variant-numeric:tabular-nums; }
+  p, li{ max-width:70ch; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Pèndol simple</h1>
+  <p>Canvia la longitud i l’angle inicial i compara el període mesurat amb el de l’aproximació d’angles petits.</p>
+
+  <canvas id="c" width="600" height="360" aria-label="Animació del pèndol"></canvas>
+  <label>Longitud L: <span id="Lv"></span> m <input id="L" type="range" min="0.5" max="3" step="0.1" value="1.5"></label>
+  <label>Angle inicial θ₀: <span id="Av"></span>° <input id="A" type="range" min="5" max="170" step="1" value="30"></label>
+  <p class="out">Període (angles petits): <span id="T0"></span> s · Període mesurat: <span id="T"></span> s</p>
+
+  <h2>Què mostra</h2>
+  <p>L’equació del moviment és θ̈ = −(g/L) sin θ. Per a angles petits, sin θ ≈ θ i el moviment és harmònic simple, amb període T₀ = 2π√(L/g), independent de l’amplitud.</p>
+  <h2>Què cal observar</h2>
+  <ul>
+    <li>Fins a uns 15–20°, el període mesurat gairebé coincideix amb T₀.</li>
+    <li>A angles grans, el període és clarament més llarg: l’aproximació deixa de valer.</li>
+    <li>Si dobles la longitud, el període augmenta un factor √2.</li>
+  </ul>
+  <p><small>Mètode numèric: Verlet de velocitats, 20 subpassos per fotograma. Exemple de simulació de l’equip.</small></p>
+</div>
+<script>
+const g = 9.81, c = document.getElementById('c'), ctx = c.getContext('2d');
+const Ls = document.getElementById('L'), As = document.getElementById('A');
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let L, th, w, t, lastCross, period;
+function reset() {
+  L = +Ls.value; th = +As.value * Math.PI / 180; w = 0; t = 0; lastCross = null; period = null;
+  document.getElementById('Lv').textContent = L.toFixed(1).replace('.', ',');
+  document.getElementById('Av').textContent = As.value;
+  document.getElementById('T0').textContent = (2 * Math.PI * Math.sqrt(L / g)).toFixed(3).replace('.', ',');
+  document.getElementById('T').textContent = '…';
+}
+Ls.oninput = As.oninput = reset;
+reset();
+function step(dt) {
+  const a = -g / L * Math.sin(th);
+  th += w * dt + 0.5 * a * dt * dt;
+  const a2 = -g / L * Math.sin(th);
+  const wOld = w;
+  w += 0.5 * (a + a2) * dt;
+  t += dt;
+  if (wOld > 0 && w <= 0) {
+    if (lastCross !== null) { period = t - lastCross; document.getElementById('T').textContent = period.toFixed(3).replace('.', ','); }
+    lastCross = t;
+  }
+}
+let prev = performance.now();
+function frame(now) {
+  const dt = Math.min((now - prev) / 1000, 0.05); prev = now;
+  for (let i = 0; i < 20; i++) step(dt / 20);
+  const ox = c.width / 2, oy = 30, scale = 300 / 3.2;
+  const x = ox + L * scale * Math.sin(th), y = oy + L * scale * Math.cos(th);
+  ctx.clearRect(0, 0, c.width, c.height);
+  ctx.strokeStyle = css('--soft'); ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(ox - 60, oy); ctx.lineTo(ox + 60, oy); ctx.stroke();
+  ctx.strokeStyle = css('--ink'); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(x, y); ctx.stroke();
+  ctx.fillStyle = css('--accent'); ctx.beginPath(); ctx.arc(x, y, 14, 0, 2 * Math.PI); ctx.fill();
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>

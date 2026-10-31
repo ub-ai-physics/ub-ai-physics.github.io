@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Guia per contribuir
+    url: https://github.com/ub-ai-physics/ub-ai-physics.github.io/blob/main/CONTRIBUIR.md
+    about: Què es pot afegir i com fer una proposta.

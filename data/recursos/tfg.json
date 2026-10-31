@@ -1,0 +1,6 @@
+{
+  "assignatura": "tfg",
+  "extres": [
+    { "id": "guia", "titol": "Guia del TFG", "descripcio": "Com triar tema i tutor, terminis i consells.", "url": "guies/tfg/" }
+  ]
+}

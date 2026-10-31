@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>ℏbar · Física UB</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='50' font-size='52' text-anchor='middle' font-family='Georgia,serif' fill='%232340A8'%3E%E2%84%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/hbar.css">
+</head>
+<body>
+
+<nav class="topnav" aria-label="Principal" data-i18n-aria="nav.aria">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="ℏbar"><span class="hb">ℏ</span>bar<small>Física UB</small></a>
+    <a class="nl" id="navPlan" href="#" data-i18n="nav.pla">Pla d’estudis</a>
+    <a class="nl" id="navMinor" href="#minor" data-i18n="nav.minor">Minor de Mates</a>
+    <a class="nl" id="navPractiques" href="#practiques-empresa" data-i18n="nav.practiques">Pràctiques</a>
+    <a class="nl" id="navTfg" href="#tfg" data-i18n="nav.tfg">TFG</a>
+    <a class="nl" id="navClaude" href="guies/estudiar-amb-claude/" data-i18n="nav.claude">Estudiar amb Claude</a>
+    <select id="lang" class="langsel" aria-label="Idioma" data-i18n-aria="nav.idioma">
+      <option value="ca">CA</option><option value="es">ES</option><option value="en">EN</option>
+    </select>
+  </div>
+</nav>
+
+<p class="loaderr" id="loadError" hidden>No s’han pogut carregar les dades de la web. Si l’estàs provant al teu ordinador, obre-la amb un servidor local (vegeu README.md).</p>
+
+<header class="hero" id="heroHome">
+  <canvas id="waves" class="waves" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h1 data-i18n-html="hero.titol">Tot el grau de <i>Física</i>,<br>sense incertesa.</h1>
+    <p data-i18n="hero.text">Les assignatures de la UB tal com van al pla d’estudis, amb el seu material d’estudi. Marca el que tens aprovat i mira què se’t desbloqueja. Mou el ratolí per aquí dalt: les ones et segueixen.</p>
+    <div class="stats">
+      <div class="stat"><b>240</b><span data-i18n="hero.s1">crèdits ECTS</span></div>
+      <div class="stat"><b>4</b><span data-i18n="hero.s2">cursos, 8 semestres</span></div>
+      <div class="stat"><b>2</b><span data-i18n="hero.s3">mencions</span></div>
+      <div class="stat"><b>24</b><span data-i18n="hero.s4">crèdits de minor en mates</span></div>
+    </div>
+    <div class="prog-card">
+      <div class="ringwrap"><div class="ring" id="bigPct"><div><div><b id="bigNum">0</b><span data-i18n="hero.de240">de 240 crèdits</span></div></div></div><div class="rstate" id="rState"></div></div>
+      <div><div id="bars"></div><div class="pnote"><span id="minorMini"></span> <span data-i18n="hero.desat">El teu progrés només es desa en aquest navegador.</span></div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section id="home">
+      <label class="search" style="margin-top:28px">
+        <input id="q" type="search" placeholder="Cerca una assignatura, un tema o una simulació…" data-i18n-ph="cerca.ph" aria-label="Cerca" data-i18n-aria="cerca.aria">
+      </label>
+      <ul class="hits" id="hits" hidden></ul>
+      <div id="degree">
+        <svg id="wires" aria-hidden="true"></svg>
+        <h2 class="sech" data-i18n="map.titol">Pla d’estudis</h2>
+        <p class="secp" data-i18n="map.text">Passa el ratolí per una assignatura per veure què necessites abans (en vermell) i què desbloqueja (en blau). Prem el cercle per marcar-la com a aprovada.</p>
+        <div class="mapbar">
+          <div class="seg" id="mencio" role="group" aria-label="Menció" data-i18n-aria="map.mencio">
+            <button type="button" data-m="FF" data-i18n="map.FF">Física Fonamental</button>
+            <button type="button" data-m="FA" data-i18n="map.FA">Física Aplicada</button>
+          </div>
+          <div class="legend">
+            <span style="--c:var(--c-FB)" data-i18n="tipus.FB">Formació bàsica</span><span style="--c:var(--c-OB)" data-i18n="tipus.OB">Obligatòria</span>
+            <span style="--c:var(--c-FF)" data-i18n="leg.FF">Menció Fonamental</span><span style="--c:var(--c-FA)" data-i18n="leg.FA">Menció Aplicada</span>
+            <span style="--c:var(--c-OT)" data-i18n="tipus.OT">Optativa</span><span style="--c:var(--c-EM)" data-i18n="leg.EM">Minor</span>
+          </div>
+        </div>
+        <div class="next" id="nextUp"></div>
+        <div class="hlinfo" id="hlInfo" aria-live="polite"></div>
+        <div id="map"></div>
+        <h2 class="sech" id="optativas" data-i18n="opt.titol">Optatives</h2>
+        <p class="secp" data-i18n="opt.text">Cal fer 30 crèdits optatius: de les comunes, de les obligatòries de l’altra menció o del minor en matemàtiques.</p>
+        <div id="optList"></div>
+      </div>
+    </section>
+
+    <section id="minorSec" hidden>
+      <div class="mhead">
+        <h1 data-i18n-html="minor.h1">Minor en <i>Matemàtiques</i></h1>
+        <p data-i18n="minor.text">24 crèdits de la matèria Elements de Matemàtiques. Per matricular-t’hi necessites 120 crèdits aprovats, incloses les matemàtiques de primer i segon i Informàtica.</p>
+        <div class="tally" aria-live="polite"><div class="marks" id="marks"></div><span id="tallyText"></span></div>
+      </div>
+      <div class="list" id="list" style="margin-top:22px"></div>
+    </section>
+
+    <section id="detail" hidden>
+      <a class="back" id="backLink" href="#">← Pla d’estudis</a>
+      <div class="dhead">
+        <div id="dglyph"></div>
+        <h1 id="dname"></h1>
+      </div>
+      <div class="dfacts" id="dfacts"></div>
+      <p class="dsum" id="dsum"></p>
+      <p class="reqline" id="reqline"></p>
+      <div class="actions">
+        <button class="pill" id="passBtn" type="button" aria-pressed="false"></button>
+        <button class="pill" id="mineBtn" type="button" aria-pressed="false"></button>
+        <a class="pill" id="claudeBtn" href="guies/estudiar-amb-claude/"></a>
+      </div>
+      <div class="dvideo" id="dvideo" hidden></div>
+
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="panel" id="panel" role="tabpanel"></div>
+    </section>
+  </div>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<footer>
+  <div class="wrap">
+    <p data-i18n-html="peu.text"><span class="hb">ℏ</span>bar està feta per i per a estudiants; no és oficial de la Universitat de Barcelona. Per a la normativa i els temaris vigents, consulta sempre el <a href="https://www.ub.edu/portal/web/fisica/grau/-/ensenyaments/detall/6293998/8" target="_blank" rel="noopener">pla d’estudis de la Facultat de Física</a>.</p>
+    <p><a href="https://github.com/ub-ai-physics/ub-ai-physics.github.io" target="_blank" rel="noopener" data-i18n="peu.github">Codi i propostes a GitHub</a></p>
+  </div>
+</footer>
+
+<script src="assets/glifs.js"></script>
+<script src="assets/hbar.js"></script>
+</body>
+</html>
