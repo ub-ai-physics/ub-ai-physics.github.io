@@ -1,0 +1,43 @@
+{
+  "preguntes": [
+    {
+      "id": "fa-001",
+      "enunciat": "Què va mostrar principalment l’experiment de dispersió de Rutherford?",
+      "opcions": [
+        "Que la càrrega positiva i gairebé tota la massa de l’àtom són en un nucli molt petit",
+        "Que l’electró té espín 1/2",
+        "Que la càrrega elèctrica està quantitzada",
+        "Que els nivells d’energia de l’hidrogen són discrets"
+      ],
+      "correcta": 0,
+      "explicacio": "La majoria de partícules alfa travessen la làmina gairebé sense desviar-se, però unes poques surten a angles molt grans. Això només s’explica si la càrrega positiva està concentrada en un volum molt petit.",
+      "simulacio": "rutherford"
+    },
+    {
+      "id": "fa-002",
+      "enunciat": "En l’experiment d’Stern-Gerlach amb àtoms de plata, quantes taques s’observen a la pantalla?",
+      "opcions": [
+        "Una banda contínua",
+        "Dues taques",
+        "Tres taques",
+        "Depèn de la temperatura del forn"
+      ],
+      "correcta": 1,
+      "explicacio": "El moment magnètic dels àtoms de plata ve de l’espín d’un sol electró desaparellat (s = 1/2). La component del moment al llarg del camp només pot prendre dos valors, i el feix es divideix en dos.",
+      "simulacio": "stern-gerlach"
+    },
+    {
+      "id": "fa-003",
+      "enunciat": "Què mesurava l’experiment de la gota d’oli de Millikan?",
+      "opcions": [
+        "La massa de l’electró",
+        "La relació càrrega/massa de l’electró",
+        "La càrrega elemental",
+        "La constant de Planck"
+      ],
+      "correcta": 2,
+      "explicacio": "Equilibrant la força elèctrica i el pes (i la fricció) de gotes d’oli carregades, Millikan va trobar que la càrrega de les gotes sempre és un múltiple enter d’un valor mínim: la càrrega elemental e.",
+      "simulacio": "millikan"
+    }
+  ]
+}

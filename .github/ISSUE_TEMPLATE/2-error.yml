@@ -1,0 +1,31 @@
+name: Error en una pàgina
+description: Avisa d'un error de física, de format o d'un enllaç trencat.
+title: "[Error] "
+labels: ["tipus: error"]
+body:
+  - type: input
+    id: pagina
+    attributes:
+      label: Pàgina
+      description: Enllaç a la pàgina del web o ruta del fitxer.
+      placeholder: "https://ub-ai-physics.github.io/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: tipus
+    attributes:
+      label: Tipus d'error
+      options:
+        - Física (càlcul, concepte, unitats...)
+        - Format (LaTeX, imatges, maquetació)
+        - Enllaç trencat
+        - Simulació que no funciona
+        - Altres
+    validations:
+      required: true
+  - type: textarea
+    id: descripcio
+    attributes:
+      label: Què passa i què hauria de dir?
+    validations:
+      required: true

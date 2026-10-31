@@ -1,0 +1,23 @@
+# Qui revisa què. GitHub demana revisió automàticament a aquests equips.
+# Equips a: github.com/orgs/ub-ai-physics/teams
+# Mana l'ÚLTIMA línia que coincideix; per això coordinació es repeteix a cada línia.
+
+*                               @ub-ai-physics/coordinacio
+
+# Web (codi de ℏbar) i dades generals
+/index.html                     @ub-ai-physics/mapa @ub-ai-physics/coordinacio
+/assets/                        @ub-ai-physics/mapa @ub-ai-physics/coordinacio
+/data/assignatures.json         @ub-ai-physics/mapa @ub-ai-physics/coordinacio
+/data/i18n/                     @ub-ai-physics/coordinacio
+/data/recursos/                 @ub-ai-physics/coordinacio
+
+# Aportacions (totes a contingut/). Coordinació assigna el revisor del grup responsable.
+/contingut/                     @ub-ai-physics/coordinacio
+
+# Guies
+/guies/                         @ub-ai-physics/guies @ub-ai-physics/coordinacio
+
+# Coordinació
+/.github/                       @ub-ai-physics/coordinacio
+/scripts/                       @ub-ai-physics/coordinacio
+/meta/                          @ub-ai-physics/coordinacio

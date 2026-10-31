@@ -1,0 +1,13 @@
+{
+  "_ajuda": "'correcta' és la posició de l'opció bona començant per 0. 'simulacio' (opcional) és el nom de la carpeta d'una simulació de contingut/.",
+  "preguntes": [
+    {
+      "id": "p-001",
+      "enunciat": "",
+      "opcions": ["", "", "", ""],
+      "correcta": 0,
+      "explicacio": "",
+      "simulacio": ""
+    }
+  ]
+}

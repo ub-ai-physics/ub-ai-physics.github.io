@@ -1,0 +1,15 @@
+{
+  "_ajuda": "Informació d'una assignatura que manté coordinació. El material, les simulacions, les preguntes i el vídeo NO van aquí: van a contingut/ amb una fitxa. Copia aquest fitxer com a data/recursos/<id-assignatura>.json i esborra el que no facis servir.",
+  "assignatura": "id-assignatura",
+  "temes": ["Primer tema", "Segon tema"],
+  "docencia": {
+    "curs": "2026-27",
+    "actualitzat": "2026-09-01",
+    "pla_docent": "https://...",
+    "horaris": "https://...",
+    "professorat": [ { "nom": "", "grup": "", "url": "" } ]
+  },
+  "extres": [
+    { "id": "guia", "titol": "Guia", "descripcio": "", "url": "guies/..." }
+  ]
+}

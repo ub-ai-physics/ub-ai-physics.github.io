@@ -1,0 +1,1124 @@
+[
+  {
+    "id": "calcul-una-variable",
+    "nom": "Càlcul d’una Variable",
+    "codi": "360569",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 1,
+    "pla": "actual"
+  },
+  {
+    "id": "algebra-lineal",
+    "nom": "Àlgebra Lineal i Geometria",
+    "codi": "360568",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 1,
+    "pla": "actual"
+  },
+  {
+    "id": "informatica",
+    "nom": "Informàtica",
+    "codi": "360572",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 1,
+    "pla": "actual"
+  },
+  {
+    "id": "quimica",
+    "nom": "Química",
+    "codi": "360567",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 1,
+    "pla": "actual"
+  },
+  {
+    "id": "fonaments-mecanica",
+    "nom": "Fonaments de Mecànica",
+    "codi": "360563",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 1,
+    "pla": "actual"
+  },
+  {
+    "id": "calcul-diverses-variables",
+    "nom": "Càlcul de Diverses Variables",
+    "codi": "360570",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 2,
+    "pla": "actual"
+  },
+  {
+    "id": "edcv",
+    "nom": "Equacions Diferencials i Càlcul Vectorial",
+    "codi": "360571",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 2,
+    "pla": "actual"
+  },
+  {
+    "id": "fonaments-em-optica",
+    "nom": "Fonaments d’Electromagnetisme i Òptica",
+    "codi": "360565",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 2,
+    "pla": "actual"
+  },
+  {
+    "id": "fonaments-laboratori",
+    "nom": "Fonaments de Laboratori",
+    "codi": "360566",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 2,
+    "pla": "actual"
+  },
+  {
+    "id": "fonaments-ones",
+    "nom": "Fonaments d’Ones, Fluids i Termodinàmica",
+    "codi": "360564",
+    "ects": 6,
+    "tipus": "FB",
+    "semestre": 2,
+    "pla": "actual"
+  },
+  {
+    "id": "mmf1",
+    "nom": "Mètodes Matemàtics per a la Física I",
+    "codi": "360577",
+    "ects": 6,
+    "tipus": "OB",
+    "semestre": 3,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "fonaments-mecanica",
+        "fonaments-ones",
+        "fonaments-em-optica",
+        "fonaments-laboratori"
+      ]
+    }
+  },
+  {
+    "id": "mecanica",
+    "nom": "Mecànica",
+    "codi": "360573",
+    "ects": 9,
+    "tipus": "OB",
+    "semestre": 3,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "fonaments-mecanica",
+        "fonaments-ones",
+        "fonaments-em-optica",
+        "fonaments-laboratori"
+      ]
+    }
+  },
+  {
+    "id": "termodinamica",
+    "nom": "Termodinàmica",
+    "codi": "360574",
+    "ects": 9,
+    "tipus": "OB",
+    "semestre": 3,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "fonaments-mecanica",
+        "fonaments-ones",
+        "fonaments-em-optica",
+        "fonaments-laboratori"
+      ]
+    }
+  },
+  {
+    "id": "astronomia",
+    "nom": "Astronomia",
+    "codi": "360583",
+    "ects": 6,
+    "tipus": "OB",
+    "semestre": 3,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "fonaments-mecanica",
+        "fonaments-ones",
+        "fonaments-em-optica",
+        "fonaments-laboratori"
+      ]
+    }
+  },
+  {
+    "id": "mmf2",
+    "nom": "Mètodes Matemàtics per a la Física II",
+    "codi": "360578",
+    "ects": 6,
+    "tipus": "OB",
+    "semestre": 4,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "fonaments-mecanica",
+        "fonaments-ones",
+        "fonaments-em-optica",
+        "fonaments-laboratori"
+      ]
+    }
+  },
+  {
+    "id": "electromagnetisme",
+    "nom": "Electromagnetisme",
+    "codi": "360575",
+    "ects": 9,
+    "tipus": "OB",
+    "semestre": 4,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "fonaments-mecanica",
+        "fonaments-ones",
+        "fonaments-em-optica",
+        "fonaments-laboratori"
+      ]
+    }
+  },
+  {
+    "id": "optica",
+    "nom": "Òptica",
+    "codi": "360576",
+    "ects": 9,
+    "tipus": "OB",
+    "semestre": 4,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "fonaments-mecanica",
+        "fonaments-ones",
+        "fonaments-em-optica",
+        "fonaments-laboratori"
+      ]
+    }
+  },
+  {
+    "id": "meteorologia",
+    "nom": "Meteorologia i Climatologia",
+    "codi": "360584",
+    "ects": 6,
+    "tipus": "OB",
+    "semestre": 4,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "fonaments-mecanica",
+        "fonaments-ones",
+        "fonaments-em-optica",
+        "fonaments-laboratori"
+      ]
+    }
+  },
+  {
+    "id": "fisica-quantica",
+    "nom": "Física Quàntica",
+    "codi": "360579",
+    "ects": 6,
+    "tipus": "OB",
+    "semestre": 5,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "tecnologia-em",
+    "nom": "Tecnologia Electromagnètica",
+    "codi": "360599",
+    "ects": 9,
+    "tipus": "FA",
+    "semestre": 5,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "psim",
+    "nom": "Programació de Simulacions i d’Instruments de Mesura",
+    "codi": "365657",
+    "ects": 6,
+    "tipus": "FA",
+    "semestre": 5,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "electronica-aplicada",
+    "nom": "Electrònica Aplicada",
+    "codi": "360593",
+    "ects": 9,
+    "tipus": "FA",
+    "semestre": 5,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "mecanica-teorica",
+    "nom": "Mecànica Teòrica",
+    "codi": "360596",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 5,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "electrodinamica",
+    "nom": "Electrodinàmica",
+    "codi": "360597",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 5,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "fisica-computacional",
+    "nom": "Física Computacional",
+    "codi": "360594",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 5,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "medis-continus",
+    "nom": "Física dels Medis Continus",
+    "codi": "360587",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 5,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "fisica-estadistica",
+    "nom": "Física Estadística",
+    "codi": "360580",
+    "ects": 6,
+    "tipus": "OB",
+    "semestre": 6,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "instrumentacio",
+    "nom": "Instrumentació",
+    "codi": "360592",
+    "ects": 9,
+    "tipus": "FA",
+    "semestre": 6,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "fisica-materials",
+    "nom": "Física de Materials",
+    "codi": "360588",
+    "ects": 6,
+    "tipus": "FA",
+    "semestre": 6,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "mecanica-quantica",
+    "nom": "Mecànica Quàntica",
+    "codi": "360600",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 6,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica"
+      ]
+    }
+  },
+  {
+    "id": "astrofisica",
+    "nom": "Astrofísica i Cosmologia",
+    "codi": "360589",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 6,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica"
+      ]
+    }
+  },
+  {
+    "id": "estat-solid",
+    "nom": "Física de l’Estat Sòlid",
+    "codi": "360581",
+    "ects": 6,
+    "tipus": "OB",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "geofisica",
+    "nom": "Geofísica",
+    "codi": "360590",
+    "ects": 6,
+    "tipus": "FA",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "psim"
+      ]
+    }
+  },
+  {
+    "id": "fotonica",
+    "nom": "Fotònica",
+    "codi": "360604",
+    "ects": 9,
+    "tipus": "FA",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "fenomens-collectius",
+    "nom": "Fenòmens Col·lectius i Transicions de Fase",
+    "codi": "360603",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica"
+      ]
+    }
+  },
+  {
+    "id": "fisica-atomica",
+    "nom": "Física Atòmica i Radiació",
+    "codi": "360601",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica"
+      ]
+    }
+  },
+  {
+    "id": "nuclear",
+    "nom": "Física Nuclear i de Partícules",
+    "codi": "360602",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica"
+      ]
+    }
+  },
+  {
+    "id": "electronica-fisica",
+    "nom": "Electrònica Física",
+    "codi": "360582",
+    "ects": 6,
+    "tipus": "OB",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "energia",
+    "nom": "Energia",
+    "codi": "360598",
+    "ects": 6,
+    "tipus": "FA",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "mecanica",
+        "termodinamica",
+        "electromagnetisme",
+        "optica"
+      ]
+    }
+  },
+  {
+    "id": "lab-moderna",
+    "nom": "Laboratori de Física Moderna",
+    "codi": "360591",
+    "ects": 6,
+    "tipus": "FF",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica",
+        "estat-solid"
+      ]
+    }
+  },
+  {
+    "id": "tfg",
+    "nom": "Treball de Fi de Grau",
+    "codi": "360621",
+    "ects": 6,
+    "tipus": "TFG",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "credits": 180
+    }
+  },
+  {
+    "id": "astronomia-observacional",
+    "nom": "Astronomia Observacional",
+    "codi": "360612",
+    "ects": 3,
+    "tipus": "OT",
+    "semestre": 5,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "astronomia",
+        "meteorologia"
+      ]
+    }
+  },
+  {
+    "id": "genere-ciencia",
+    "nom": "Gènere, Ciència i Tecnologia",
+    "codi": "366879",
+    "ects": 3,
+    "tipus": "OT",
+    "semestre": 5,
+    "pla": "actual"
+  },
+  {
+    "id": "practiques-empresa",
+    "nom": "Pràctiques en Empresa",
+    "codi": "360620",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 6,
+    "pla": "actual",
+    "requisits": {
+      "credits": 120
+    }
+  },
+  {
+    "id": "relativitat-general",
+    "nom": "Relativitat General",
+    "codi": "360607",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 6,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "electrodinamica",
+        "mecanica-teorica"
+      ]
+    }
+  },
+  {
+    "id": "meteorologia-dinamica",
+    "nom": "Meteorologia Dinàmica",
+    "codi": "360619",
+    "ects": 3,
+    "tipus": "OT",
+    "semestre": 6,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "astronomia",
+        "meteorologia"
+      ]
+    }
+  },
+  {
+    "id": "historia-fisica",
+    "nom": "Història de la Física",
+    "codi": "360610",
+    "ects": 3,
+    "tipus": "OT",
+    "semestre": 6,
+    "pla": "actual"
+  },
+  {
+    "id": "processament-imatge",
+    "nom": "Processament d’Imatge i Visió Artificial",
+    "codi": "364286",
+    "ects": 3,
+    "tipus": "OT",
+    "semestre": 6,
+    "pla": "actual"
+  },
+  {
+    "id": "espectroscopia",
+    "nom": "Fonaments d’Espectroscòpia",
+    "codi": "360613",
+    "ects": 3,
+    "tipus": "OT",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica"
+      ]
+    }
+  },
+  {
+    "id": "plasmes",
+    "nom": "Plasmes i Processos Astrofísics",
+    "codi": "360608",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "astronomia",
+        "meteorologia"
+      ]
+    }
+  },
+  {
+    "id": "projectes",
+    "nom": "Projectes",
+    "codi": "364287",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 7,
+    "pla": "actual"
+  },
+  {
+    "id": "sistemes-fora-equilibri",
+    "nom": "Sistemes Fora de l’Equilibri",
+    "codi": "360609",
+    "ects": 3,
+    "tipus": "OT",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica"
+      ]
+    }
+  },
+  {
+    "id": "teoria-informacio",
+    "nom": "Teoria de la Informació Clàssica i Quàntica",
+    "codi": "360618",
+    "ects": 3,
+    "tipus": "OT",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-estadistica",
+        "mecanica-quantica"
+      ]
+    }
+  },
+  {
+    "id": "micro-nano",
+    "nom": "Micro i Nanotecnologia",
+    "codi": "360611",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica",
+        "estat-solid"
+      ]
+    }
+  },
+  {
+    "id": "biofisica",
+    "nom": "Biofísica",
+    "codi": "360615",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica"
+      ]
+    }
+  },
+  {
+    "id": "altes-energies",
+    "nom": "Física d’Altes Energies i Acceleradors",
+    "codi": "360605",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "electrodinamica",
+        "mecanica-quantica"
+      ]
+    }
+  },
+  {
+    "id": "fisica-medica",
+    "nom": "Física Mèdica",
+    "codi": "360616",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-atomica"
+      ]
+    }
+  },
+  {
+    "id": "instrumentacio-virtual",
+    "nom": "Instrumentació Virtual",
+    "codi": "364954",
+    "ects": 3,
+    "tipus": "OT",
+    "semestre": 8,
+    "pla": "actual"
+  },
+  {
+    "id": "magnetisme",
+    "nom": "Magnetisme i Superconductivitat",
+    "codi": "360617",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica"
+      ]
+    }
+  },
+  {
+    "id": "mq-ncossos",
+    "nom": "Mecànica Quàntica de N-Cossos i Sistemes Ultrafreds",
+    "codi": "360606",
+    "ects": 6,
+    "tipus": "OT",
+    "semestre": 8,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "fisica-quantica",
+        "fisica-estadistica",
+        "estat-solid"
+      ]
+    }
+  },
+  {
+    "id": "equacions-algebraiques",
+    "nom": "Equacions Algebraiques",
+    "codi": "360149",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": null,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Teoria de Galois: extensions de cossos, grups de Galois i resolubilitat d’equacions per radicals.",
+    "glif": "galois",
+    "minor": true
+  },
+  {
+    "id": "equacions-diferencials",
+    "nom": "Equacions Diferencials",
+    "codi": "360154",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": null,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Teoria d’equacions diferencials ordinàries: existència i unicitat, sistemes lineals, estabilitat i retrats de fase.",
+    "glif": "edo",
+    "minor": true
+  },
+  {
+    "id": "estadistica",
+    "nom": "Estadística",
+    "codi": "360163",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": null,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Inferència estadística: estimació, intervals de confiança i contrastos d’hipòtesis.",
+    "glif": "estad",
+    "minor": true
+  },
+  {
+    "id": "estructures-algebraiques",
+    "nom": "Estructures Algebraiques",
+    "codi": "360148",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": null,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Grups i anells: subestructures, quocients, morfismes i exemples clàssics.",
+    "glif": "estr",
+    "minor": true
+  },
+  {
+    "id": "geometria-diferencial",
+    "nom": "Geometria Diferencial de Corbes i Superfícies",
+    "codi": "360156",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": null,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Corbes i superfícies a l’espai: triedre de Frenet, curvatures i formes fonamentals.",
+    "glif": "gdif",
+    "minor": true
+  },
+  {
+    "id": "metodes-matematics-avancats",
+    "nom": "Mètodes Matemàtics Avançats",
+    "codi": "364684",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": 7,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Ampliació de mètodes matemàtics. Consulta el pla docent per al temari concret.",
+    "glif": "mma",
+    "minor": true
+  },
+  {
+    "id": "metodes-numerics",
+    "nom": "Mètodes Numèrics I",
+    "codi": "360146",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": null,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Aproximació numèrica: equacions no lineals, interpolació, integració i sistemes lineals.",
+    "glif": "num",
+    "minor": true
+  },
+  {
+    "id": "probabilitats",
+    "nom": "Probabilitats",
+    "codi": "360162",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": null,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Espais de probabilitat, variables aleatòries, lleis dels grans nombres i teorema central del límit.",
+    "glif": "prob",
+    "minor": true
+  },
+  {
+    "id": "topologia",
+    "nom": "Topologia",
+    "codi": "360155",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": null,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Espais topològics i mètrics, continuïtat, compacitat i connexió.",
+    "glif": "top",
+    "minor": true
+  },
+  {
+    "id": "tggs",
+    "nom": "Topologia i Geometria Global de Superfícies",
+    "codi": "360157",
+    "ects": 6,
+    "tipus": "EM",
+    "semestre": null,
+    "pla": "actual",
+    "requisits": {
+      "assignatures": [
+        "algebra-lineal",
+        "calcul-una-variable",
+        "calcul-diverses-variables",
+        "edcv",
+        "mmf1",
+        "mmf2",
+        "informatica"
+      ],
+      "credits": 120
+    },
+    "resum": "Grup fonamental, classificació de superfícies compactes, geometria de Riemann en dimensió dos i Gauss-Bonnet.",
+    "glif": "tggs",
+    "minor": true
+  }
+]

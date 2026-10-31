@@ -1,0 +1,9 @@
+# En preparació: la carpeta ja existeix perquè l'autor/a hi pugi la simulació.
+# Quan hi sigui: posa fitxer: index.html i canvia l'estat a esborrany.
+titol: Òrbita planetària
+seccio: simulacions
+tipus: simulacio
+assignatures: fonaments-mecanica, mecanica
+concepte: Moviment sota una força central; lleis de Kepler.
+autors: Robert
+estat: per-portar

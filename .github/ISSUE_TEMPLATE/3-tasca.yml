@@ -1,0 +1,22 @@
+name: Tasca de coordinació
+description: Tasca d'organització, estructura o manteniment del lloc (per a coordinació).
+title: "[Tasca] "
+labels: ["tipus: coordinacio"]
+body:
+  - type: textarea
+    id: objectiu
+    attributes:
+      label: Objectiu
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos
+      value: |
+        - [ ] 
+        - [ ] 
+  - type: input
+    id: data
+    attributes:
+      label: Data límit (si n'hi ha)

@@ -1,0 +1,12 @@
+# Fitxa d'apunts, problemes, exàmens o bibliografia.
+titol: Tema 3. Àtoms multielectrònics
+seccio: apunts              # apunts, problemes, examens o bibliografia
+assignatures: fisica-atomica
+fitxer: apunts.pdf          # un fitxer d'aquesta carpeta…
+# enllac: https://...       # …o un enllaç (fes servir una de les dues línies)
+# tema: 3                   # opcional: número de tema
+# solucio: solucions.pdf    # opcional, per a problemes i exàmens
+# curs: 2024-25             # per a exàmens
+# convocatoria: Final       # per a exàmens
+autors: El teu nom
+estat: esborrany

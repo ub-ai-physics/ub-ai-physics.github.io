@@ -1,0 +1,6 @@
+{
+  "assignatura": "practiques-empresa",
+  "extres": [
+    { "id": "guia", "titol": "Guia de pràctiques", "descripcio": "Com funcionen les pràctiques curriculars, consells i estratègies.", "url": "guies/practiques/" }
+  ]
+}

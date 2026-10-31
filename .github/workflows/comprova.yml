@@ -1,0 +1,14 @@
+name: Comprova la proposta
+# A cada proposta (pull request): comprova que les dades són correctes.
+# Si falla, obre "Details" per veure quin fitxer i quina línia cal corregir.
+on:
+  pull_request:
+jobs:
+  comprova:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/comprova.py
