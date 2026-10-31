@@ -1,0 +1,9 @@
+# Fitxa d'una simulació o d'un objecte visual. Les línies que comencen amb # no compten.
+titol: Títol de la simulació
+seccio: simulacions
+tipus: simulacio            # simulacio o objecte-visual
+assignatures: fisica-atomica, fisica-quantica    # ids de data/assignatures.json, separats per comes
+concepte: Una frase sobre la física que il·lustra.
+fitxer: index.html
+autors: El teu nom
+estat: esborrany            # esborrany, revisat o per-portar

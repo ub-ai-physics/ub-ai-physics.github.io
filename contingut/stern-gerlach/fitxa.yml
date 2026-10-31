@@ -1,0 +1,9 @@
+# En preparació: la carpeta ja existeix perquè l'autor/a hi pugi la simulació.
+# Quan hi sigui: posa fitxer: index.html i canvia l'estat a esborrany.
+titol: Experiment d’Stern-Gerlach
+seccio: simulacions
+tipus: simulacio
+assignatures: fisica-quantica, fisica-atomica
+concepte: Quantització de l’espín.
+autors: Robert
+estat: per-portar

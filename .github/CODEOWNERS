@@ -11,12 +11,8 @@
 /data/i18n/                     @ub-ai-physics/coordinacio
 /data/recursos/                 @ub-ai-physics/coordinacio
 
-# Simulacions i objectes visuals
-/simulacions/                   @ub-ai-physics/simulacions @ub-ai-physics/coordinacio
-/data/simulacions.json          @ub-ai-physics/simulacions @ub-ai-physics/coordinacio
-
-# Autoavaluació
-/autoavaluacio/                 @ub-ai-physics/autoavaluacio @ub-ai-physics/coordinacio
+# Aportacions (totes a contingut/). Coordinació assigna el revisor del grup responsable.
+/contingut/                     @ub-ai-physics/coordinacio
 
 # Guies
 /guies/                         @ub-ai-physics/guies @ub-ai-physics/coordinacio

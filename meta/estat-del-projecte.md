@@ -50,7 +50,9 @@ sigui fàcil d'omplir i ampliar.
       i objectes visuals i Autoavaluació), botó *Estudiar amb Claude* i barra superior.
 - [x] Selector d'idioma (català per defecte; castellà i anglès per a la interfície).
 - [x] Comprovació automàtica de les propostes i publicació automàtica.
-- [x] Plantilles: simulació, recursos d'assignatura, preguntes, issues i propostes.
+- [x] Un sol lloc per aportar (`contingut/`) amb fitxes que col·loquen cada aportació al seu lloc.
+- [x] Carpetes de material sempre visibles a cada assignatura, amb instruccions per omplir les buides.
+- [x] Plantilles: simulació, apunts, preguntes, vídeo, issues i propostes.
 
 ## Tasques obertes
 
@@ -58,10 +60,10 @@ sigui fàcil d'omplir i ampliar.
 - [ ] Crear equips a l'organització de GitHub, etiquetes i tauler; protegir `main`.
 - [ ] Acordar on va el material de classe (vegeu *Decisions pendents*).
 - [ ] Revisar `data/assignatures.json` contra la Guia Acadèmica (curs 2026-27).
-- [ ] Portar les simulacions de Robert (Python) a HTML o exportar-les com a animació.
-- [ ] Identificar l'autor/a de *Rutherford* i pujar-la.
+- [ ] Portar les simulacions de Robert (Python) a HTML o exportar-les com a animació. Les seves carpetes ja existeixen a `contingut/` en estat `per-portar`.
+- [ ] Identificar l'autor/a de *Rutherford* i pujar-la a `contingut/rutherford/`.
 - [ ] Identificar l'autor/a del *Laboratorio Virtual* i posar-lo en contacte amb Simulacions i Autoavaluació.
-- [ ] Acordar amb Joan el format comú de preguntes (`autoavaluacio/_exemple.json`).
+- [ ] Acordar amb Joan el format comú de preguntes (`contingut/_plantilles/preguntes/`).
 - [ ] Traduir *Study with Claude* al català i posar-la a `guies/estudiar-amb-claude/`.
 - [ ] Guia de pràctiques (Miquel) i guia del TFG amb el directori de professorat (Ulises).
 - [ ] **Fitxa pilot completa: Física Atòmica i Radiació** (ja té 3 preguntes d'exemple i 3 simulacions en preparació).

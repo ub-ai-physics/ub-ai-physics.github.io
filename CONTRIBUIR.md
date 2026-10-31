@@ -1,35 +1,85 @@
-# Com contribuir
+# Llegeix això primer
 
-El contingut es fa **en català** (les traduccions al castellà o l'anglès són opcionals).
-Abans de començar, mira el tauler del projecte per veure què hi ha per fer.
+ℏbar és la web extraoficial del Grau en Física de la UB que fem entre tots: el pla d'estudis
+navegable i, per a cada assignatura, el material d'estudi. Aquí tens el que necessites per
+començar a aportar-hi. Són cinc minuts.
 
-## Què vols afegir?
+## La idea en una frase
 
-| Vull afegir… | Què cal fer |
+**Tot el que facis va a una carpeta pròpia dins de `contingut/`, amb un fitxer `fitxa.yml` que
+diu a quina assignatura i a quina secció pertany.** La web el col·loca sola al lloc que toca.
+
+```
+contingut/
+└── stern-gerlach/           ← la teva carpeta (minúscules, guions, sense accents)
+    ├── index.html           ← el teu treball (simulació, PDF, preguntes…)
+    └── fitxa.yml            ← l'etiqueta: on ha d'anar
+```
+
+```
+titol: Experiment d’Stern-Gerlach
+seccio: simulacions
+assignatures: fisica-quantica, fisica-atomica
+fitxer: index.html
+autors: Robert, Carlos
+estat: esborrany
+```
+
+Amb aquesta fitxa, la simulació surt a la carpeta *Simulacions i objectes visuals* de Física
+Quàntica **i** de Física Atòmica. No cal tocar res més.
+
+- **seccio:** `apunts`, `problemes`, `examens`, `bibliografia`, `simulacions`, `autoavaluacio`,
+  `video` o `extra`.
+- **assignatures:** l'identificador de cada assignatura (camp `id` de `data/assignatures.json`),
+  separats per comes. També el veus a l'adreça de la fitxa a la web: `…/#fisica-atomica`.
+- **fitxer** (un fitxer de la teva carpeta) **o enllac** (un enllaç complet, `https://…`).
+- **estat:** `esborrany` quan ho pugis; només qui ho revisa ho canvia a `revisat`.
+
+A `contingut/_plantilles/` hi ha fitxes ja fetes per a cada tipus: copia la carpeta que et
+toqui, canvia-li el nom i omple-la. A `contingut/README.md` hi ha tots els camps.
+
+## Què ha de llegir cadascú
+
+| Si ets… | Llegeix |
 |---|---|
-| **Una simulació o un objecte visual** | Copia `simulacions/_plantilla/` com a `simulacions/<id>/`, fes-hi la simulació i afegeix-la a `data/simulacions.json`. Exemple complet: `simulacions/pendol/`. |
-| **Preguntes d'autoavaluació** | Crea o amplia `autoavaluacio/<id-assignatura>.json` seguint `autoavaluacio/_exemple.json`, i enllaça-ho al fitxer de recursos de l'assignatura. |
-| **Vídeo, informació docent, enllaços a material, seccions extra** | Crea o edita `data/recursos/<id-assignatura>.json` seguint `data/recursos/_plantilla.json`. |
-| **Apunts, problemes, exàmens o bibliografia** | Encara s'ha d'acordar on s'allotgen. De moment, obre un issue i parla-ho amb coordinació. |
-| **Una guia** (Estudiar amb Claude, Pràctiques, TFG) | Edita `guies/<nom>/index.html`. |
-| **Traduccions** | Edita `data/i18n/es.json` o `en.json`. Els textos que hi falten es mostren en català. |
-| **Un error** | Obre un issue amb la plantilla *Error en una pàgina*, o fes directament la proposta. |
+| Qualsevol persona que vol aportar | Aquest document i `meta/guia-estil.md` |
+| Membre d'un equip | La fila del teu equip a `meta/estat-del-projecte.md` (què hi ha fet i què falta) |
+| Coordinació o qui toca la web | `meta/organitzacio.md` i `meta/estructura.md` |
 
-L'**identificador** de cada assignatura és el camp `id` de `data/assignatures.json`
-(per exemple `fisica-atomica`, `mecanica`, `psim`). Fes-lo servir sempre.
+## Pujar-ho, pas a pas
 
-## Fer una proposta des del navegador
+**Des del navegador** (per a una aportació petita):
 
-1. Obre o tria un issue i assigna-te'l.
-2. Al repositori, entra a la carpeta on va el teu fitxer. Fes **Add file → Upload files** per
-   pujar-lo o, per editar-ne un, obre'l i prem el llapis.
-3. A baix, tria **Create a new branch** i prem **Propose changes**.
-4. Omple la plantilla de la proposta i envia-la.
-5. GitHub comprova automàticament les dades. Si surt una creu vermella, prem *Details*:
-   et diu quin fitxer i quin camp cal corregir. Corregeix-ho a la mateixa branca.
-6. El teu grup revisa la física; després coordinació revisa i publica.
+1. Al repositori, entra a `contingut/` i fes **Add file → Upload files**.
+2. Arrossega-hi la teva carpeta sencera, amb el treball i la `fitxa.yml`.
+3. A baix, tria **Create a new branch** i prem **Propose changes**. Omple la plantilla i envia-la.
 
-## Fer-ho amb Claude
+**Amb GitHub Desktop** (si treballes sovint): crea una branca, copia la teva carpeta dins de
+`contingut/`, fes *Commit*, *Publish branch* i *Create Pull Request*.
 
-Al projecte compartit de Claude de l'equip, Claude coneix aquesta estructura: demana-li la
-simulació, les preguntes o el fitxer de recursos i et dirà on va cada cosa. Revisa sempre la física.
+Després:
+
+4. GitHub comprova automàticament la teva fitxa. Si surt una creu vermella, prem *Details*:
+   et diu quin camp cal corregir.
+5. Algú del teu grup revisa la física i la coordinació ho publica.
+
+## Veure-ho al teu ordinador abans de pujar-ho
+
+Amb Python instal·lat, des de la carpeta del repositori:
+
+```
+py scripts/comprova.py --construeix
+py -m http.server -d _site
+```
+
+i obre http://localhost:8000. (A Mac o Linux, `python3` en lloc de `py`.)
+
+## Altres coses
+
+- **Traduccions:** la web és en català; el castellà i l'anglès són opcionals. Textos de la
+  interfície a `data/i18n/`; per traduir una aportació, afegeix a la fitxa `titol_es:`, `titol_en:`…
+- **Guies** (Estudiar amb Claude, Pràctiques, TFG): són a `guies/`.
+- **Material de professorat:** encara s'ha d'acordar on va. No el pugis sense parlar-ne abans.
+- **Amb Claude:** al projecte compartit de l'equip, Claude coneix aquest sistema. Demana-li el
+  treball i la fitxa, i revisa sempre la física.
+- **Dubtes o errors:** obre un issue.

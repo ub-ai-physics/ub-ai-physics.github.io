@@ -353,3 +353,8 @@ a.pill:hover{border-color:var(--blue)}
 .xdesc{max-width:70ch;margin-top:14px}
 .topnav select.langsel{display:inline-block;width:auto;margin:0 0 0 6px;padding:4px 6px;font-size:.82rem;background:var(--surface)}
 .sim .btns{gap:8px;margin-top:12px}
+.folder.empty{background:transparent;border-style:dashed;color:var(--ink-soft)}
+.folder.empty .fname{color:var(--ink-soft)}
+.emptybox{max-width:70ch;padding-top:14px}
+.emptybox p{margin:0 0 10px}
+pre.fitxa{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;margin:0 0 6px}

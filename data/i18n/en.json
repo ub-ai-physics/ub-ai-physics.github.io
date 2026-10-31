@@ -132,8 +132,6 @@
   "sec.simulacions": "Simulations and visuals",
   "sec.autoavaluacio": "Self-assessment",
   "sec.pla": "Course guide",
-  "material.buit": "This course has no study material yet.",
-  "material.pendents": "No content yet:",
   "material.contribueix": "How to add material",
   "material.carpetes": "Study material",
   "pla.curs": "Academic year {c}",
@@ -181,5 +179,9 @@
   "tipus.curt.OT": "OT",
   "tipus.curt.EM": "Minor",
   "tipus.curt.TFG": "TFG",
-  "n.preparacio": "{n} in preparation"
+  "n.preparacio": "{n} in preparation",
+  "folder.buida": "Empty",
+  "material.vols": "Want to add material?",
+  "buida.text": "This folder is still empty. If you have material for this course, you can add it.",
+  "buida.com": "Create a new folder inside contingut/ with your file and a fitxa.yml file like this one (you can copy the template in {plantilla}):"
 }

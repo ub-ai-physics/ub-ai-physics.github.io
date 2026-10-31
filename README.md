@@ -4,7 +4,7 @@ Web extraoficial feta per i per a estudiants del Grau en Física de la UB: el pl
 navegable i, per a cada assignatura, la informació docent i el material d'estudi.
 
 - **Web:** https://ub-ai-physics.github.io
-- **Com contribuir:** [CONTRIBUIR.md](CONTRIBUIR.md)
+- **Per començar a aportar-hi:** [CONTRIBUIR.md](CONTRIBUIR.md)
 - **Organització de l'equip:** [meta/](meta/)
 
 No és una web oficial de la Universitat de Barcelona.
@@ -16,12 +16,11 @@ Per afegir contingut **no cal tocar el codi**: s'afegeixen fitxers i línies a l
 Detalls a [meta/estructura.md](meta/estructura.md).
 
 ```
+contingut/               TOTES les aportacions: una carpeta per aportació, amb fitxa.yml
 index.html, assets/      La web (ℏbar, de Jose)
-data/                    Assignatures, simulacions, recursos per assignatura, textos (ca/es/en)
-simulacions/             Una carpeta per simulació, amb un index.html
-autoavaluacio/           Preguntes per assignatura
+data/                    Assignatures, informació docent per assignatura, textos (ca/es/en)
 guies/                   Estudiar amb Claude, Pràctiques, TFG
-scripts/comprova.py      Comprova les dades i construeix la web
+scripts/comprova.py      Comprova les fitxes i construeix la web
 meta/                    Documents interns de l'equip (no es publiquen)
 ```
 
@@ -35,9 +34,11 @@ Cada canvi que entra a `main` es comprova i es publica sol en un o dos minuts
 Cal Python 3. Des de la carpeta del repositori:
 
 ```
-python3 scripts/comprova.py --construeix
-python3 -m http.server -d _site
+py scripts/comprova.py --construeix
+py -m http.server -d _site
 ```
+
+(A Mac o Linux, `python3` en lloc de `py`.)
 
 i obre http://localhost:8000. (Obrir `index.html` directament amb doble clic no funciona,
 perquè el navegador no deixa llegir les dades.)

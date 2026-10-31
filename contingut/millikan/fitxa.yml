@@ -1,0 +1,9 @@
+# En preparació: la carpeta ja existeix perquè l'autor/a hi pugi la simulació.
+# Quan hi sigui: posa fitxer: index.html i canvia l'estat a esborrany.
+titol: Experiment de Millikan
+seccio: simulacions
+tipus: simulacio
+assignatures: fisica-atomica, lab-moderna
+concepte: Quantització de la càrrega elèctrica.
+autors: Robert
+estat: per-portar

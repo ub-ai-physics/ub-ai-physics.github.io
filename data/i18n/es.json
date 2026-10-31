@@ -132,8 +132,6 @@
   "sec.simulacions": "Simulaciones y objetos visuales",
   "sec.autoavaluacio": "Autoevaluación",
   "sec.pla": "Plan docente",
-  "material.buit": "Esta asignatura todavía no tiene material de estudio.",
-  "material.pendents": "Todavía sin contenido:",
   "material.contribueix": "Cómo añadir material",
   "material.carpetes": "Material de estudio",
   "pla.curs": "Curso {c}",
@@ -181,5 +179,9 @@
   "tipus.curt.OT": "OT",
   "tipus.curt.EM": "Minor",
   "tipus.curt.TFG": "TFG",
-  "n.preparacio": "{n} en preparación"
+  "n.preparacio": "{n} en preparación",
+  "folder.buida": "Vacía",
+  "material.vols": "¿Quieres añadir material?",
+  "buida.text": "Esta carpeta todavía está vacía. Si tienes material para esta asignatura, puedes añadirlo.",
+  "buida.com": "Crea una carpeta nueva dentro de contingut/ con tu archivo y un archivo fitxa.yml como este (puedes copiar la plantilla de {plantilla}):"
 }

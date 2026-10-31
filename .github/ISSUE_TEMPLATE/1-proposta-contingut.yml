@@ -28,7 +28,7 @@ body:
     id: assignatura
     attributes:
       label: Assignatura(es)
-      description: "Fes servir l'id de data/assignatures.json."
+      description: "L'id de data/assignatures.json (el que surt a l'adreça de la fitxa, p. ex. #fisica-atomica)."
       placeholder: "fisica-atomica"
   - type: textarea
     id: descripcio

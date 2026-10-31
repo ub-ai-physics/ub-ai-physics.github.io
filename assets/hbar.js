@@ -66,7 +66,8 @@ const simsOf = sid => SIMS.filter(s=>(s.assignatures||[]).includes(sid));
 const simsReady = sid => simsOf(sid).filter(s=>s.estat!=="per-portar" && s.fitxer);
 const extresOf = sid => { const r=RECURSOS[sid]; return (r&&Array.isArray(r.extres)?r.extres:[]).filter(e=>e && (e.url || (e.items&&e.items.length))); };
 const quizInfo = sid => { const r=RECURSOS[sid]; return (r&&r.autoavaluacio)||{}; };
-const hasQuiz = sid => { const q=quizInfo(sid); return !!(q.app || q.preguntes); };
+const quizApps = sid => { const q=quizInfo(sid); return [...(q.app?[{url:q.app}]:[]), ...(Array.isArray(q.apps)?q.apps:[])].filter(x=>x&&x.url); };
+const hasQuiz = sid => !!(quizApps(sid).length || quizInfo(sid).preguntes);
 const countFor = sid => resOf(sid).length + simsReady(sid).length;
 
 async function ensureRecursos(sid){
@@ -370,19 +371,17 @@ function renderDetail(){
   const secs=sectionsOf(s.id), cur=secs.find(x=>x.id===tab);
   const crumbs=el("div","crumbs");
   if(!cur){
-    const full=secs.filter(x=>sectionCount(s.id,x)>0), empty=secs.filter(x=>!x.extra && sectionCount(s.id,x)===0);
-    if(full.length){
-      const grid=el("div","folders");
-      full.forEach(x=>{ const b=el("button","folder"); b.type="button"; b.innerHTML=FOLDER_SVG; b.appendChild(el("span","fname",x.label)); b.appendChild(el("span","fcount",sectionCountLabel(s.id,x))); b.onclick=()=>setTab(x.id); grid.appendChild(b); });
-      p.appendChild(grid);
-    } else p.appendChild(el("p","empty",t("material.buit")));
-    if(empty.length){ const n=el("p","pending"); n.appendChild(document.createTextNode(t("material.pendents")+" "+empty.map(x=>x.label).join(", ")+". "));
-      const a=el("a",null,t("material.contribueix")); a.href=CONTRIBUIR_URL; a.target="_blank"; a.rel="noopener"; n.appendChild(a); p.appendChild(n); }
+    const grid=el("div","folders");
+    secs.forEach(x=>{ const n=sectionCount(s.id,x); const b=el("button","folder"+(n?"":" empty")); b.type="button"; b.innerHTML=FOLDER_SVG;
+      b.appendChild(el("span","fname",x.label)); b.appendChild(el("span","fcount", n?sectionCountLabel(s.id,x):t("folder.buida"))); b.onclick=()=>setTab(x.id); grid.appendChild(b); });
+    p.appendChild(grid);
+    const n=el("p","pending"); n.appendChild(document.createTextNode(t("material.vols")+" ")); const a=el("a",null,t("material.contribueix")); a.href=CONTRIBUIR_URL; a.target="_blank"; a.rel="noopener"; n.appendChild(a); p.appendChild(n);
   } else {
     const back=el("button","link",t("material.carpetes")); back.type="button"; back.onclick=()=>setTab("");
     crumbs.append(back, el("span","sep","/"), el("span","crumb-here",cur.label)); p.appendChild(crumbs);
     const rs=resOf(s.id);
-    if(cur.kind==="apunts") panelApunts(p,s,rs);
+    if(!sectionCount(s.id,cur)) panelEmpty(p,s,cur);
+    else if(cur.kind==="apunts") panelApunts(p,s,rs);
     else if(cur.kind==="problemes") panelProblemes(p,s,rs);
     else if(cur.kind==="examens") panelExamens(p,s,rs);
     else if(cur.kind) panelSimple(p,rs.filter(r=>r.kind===cur.kind));
@@ -392,6 +391,18 @@ function renderDetail(){
   }
 }
 
+const PLANTILLA_DE = {apunts:"apunts", problemes:"apunts", examens:"apunts", bibliografia:"apunts", simulacions:"simulacio", autoavaluacio:"preguntes"};
+const FITXER_DE = {apunts:"apunts.pdf", problemes:"problemes.pdf", examens:"examen.pdf", bibliografia:"llista.pdf", simulacions:"index.html", autoavaluacio:"preguntes.json"};
+function panelEmpty(p, s, sec){
+  const box=el("div","emptybox");
+  box.appendChild(el("p",null,t("buida.text")));
+  if(sec.id==="simulacions"){ const soon=simsOf(s.id).filter(x=>x.estat==="per-portar"); if(soon.length) box.appendChild(el("p","pending",t("sim.preparacio")+" "+soon.map(x=>tr(x,"titol")).join(", ")+".")); }
+  box.appendChild(el("p",null,t("buida.com",{plantilla:"contingut/_plantilles/"+(PLANTILLA_DE[sec.id]||"apunts")+"/"})));
+  const pre=el("pre","fitxa"); pre.textContent=["titol: …","seccio: "+sec.id,"assignatures: "+s.id,"fitxer: "+(FITXER_DE[sec.id]||"fitxer.pdf"),"autors: …","estat: esborrany"].join("\n");
+  box.appendChild(pre);
+  const a=el("a","btn main",t("material.contribueix")); a.href=CONTRIBUIR_URL; a.target="_blank"; a.rel="noopener"; const b=el("div","btns"); b.appendChild(a); box.appendChild(b);
+  p.appendChild(box);
+}
 function panelPla(p, s){
   const d=(RECURSOS[s.id]||{}).docencia||{};
   const any = d.pla_docent || d.horaris || (d.professorat&&d.professorat.length);
@@ -474,8 +485,8 @@ function panelSims(p, s){
 }
 async function panelQuiz(p, s){
   const info=quizInfo(s.id);
-  const app=safeUrl(info.app);
-  if(app){ const b=el("div","btns quizapp"); b.appendChild(linkBtn(app,t("quiz.app"),true)); p.appendChild(b); }
+  const apps=quizApps(s.id).map(x=>({u:safeUrl(x.url), titol:x.titol})).filter(x=>x.u);
+  if(apps.length){ const b=el("div","btns quizapp"); apps.forEach((x,i)=>b.appendChild(linkBtn(x.u, x.titol||t("quiz.app"), i===0))); p.appendChild(b); }
   if(!info.preguntes) return;
   const tok=renderTok;
   await ensureQuiz(s.id);

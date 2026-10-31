@@ -139,8 +139,6 @@
   "sec.simulacions": "Simulacions i objectes visuals",
   "sec.autoavaluacio": "Autoavaluació",
   "sec.pla": "Pla docent",
-  "material.buit": "Aquesta assignatura encara no té material d’estudi.",
-  "material.pendents": "Encara sense contingut:",
   "material.contribueix": "Com afegir-n’hi",
   "material.carpetes": "Material d’estudi",
   "pla.curs": "Curs {c}",
@@ -181,5 +179,9 @@
   "extra.obre": "Obre",
   "peu.text": "<span class=\"hb\">ℏ</span>bar està feta per i per a estudiants; no és oficial de la Universitat de Barcelona. Per a la normativa i els temaris vigents, consulta sempre el <a href=\"https://www.ub.edu/portal/web/fisica/grau/-/ensenyaments/detall/6293998/8\" target=\"_blank\" rel=\"noopener\">pla d’estudis de la Facultat de Física</a>.",
   "peu.github": "Codi i propostes a GitHub",
-  "n.preparacio": "{n} en preparació"
+  "n.preparacio": "{n} en preparació",
+  "folder.buida": "Buida",
+  "material.vols": "Vols afegir-hi material?",
+  "buida.text": "Aquesta carpeta encara és buida. Si tens material per a aquesta assignatura, pots afegir-lo.",
+  "buida.com": "Crea una carpeta nova dins de contingut/ amb el teu fitxer i un fitxer fitxa.yml com aquest (pots copiar la plantilla de {plantilla}):"
 }

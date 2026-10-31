@@ -11,8 +11,8 @@ Termes tècnics en català si n'hi ha d'establerts; si cal, l'anglès entre par�
 
 ## Simulacions i objectes visuals
 
-- **Una simulació = un únic fitxer HTML** autocontingut (CSS i JS a dins), a
-  `simulacions/<id>/index.html`. Parteix de `simulacions/_plantilla/` (exemple: `simulacions/pendol/`).
+- **Una simulació = un únic fitxer HTML** autocontingut (CSS i JS a dins), dins de la teva
+  carpeta de `contingut/`. Parteix de `contingut/_plantilles/simulacio/` (exemple: `contingut/pendol/`).
   Biblioteques externes només de cdnjs o jsDelivr, amb la versió fixada.
 - Ha d'incloure a la mateixa pàgina una **explicació del concepte**: què mostra, quins
   paràmetres es poden canviar, quina física il·lustra i què cal observar.
@@ -21,29 +21,13 @@ Termes tècnics en català si n'hi ha d'establerts; si cal, l'anglès entre par�
 - **Simulacions en Python:** el navegador no les pot executar. Dues opcions:
   portar-les a JavaScript (Claude ho fa bé amb casos clàssics) o exportar-les com a
   animació (GIF o vídeo curt) i publicar-les com a *objecte visual*.
-- Cada simulació té una entrada a `data/simulacions.json`:
-
-```json
-{
-  "id": "stern-gerlach",
-  "titol": "Experiment d'Stern-Gerlach",
-  "tipus": "simulacio",
-  "autors": ["Nom"],
-  "assignatures": ["fisica-quantica", "fisica-atomica"],
-  "concepte": "Quantització de l'espín.",
-  "fitxer": "simulacions/stern-gerlach/index.html",
-  "estat": "esborrany",
-  "revisor": ""
-}
-```
-
-`tipus`: `simulacio` o `objecte-visual`. `estat`: `per-portar`, `esborrany` o `revisat`.
+- La fitxa (`fitxa.yml`) indica les assignatures, el concepte i l'estat (vegeu `contingut/README.md`).
 
 ## Autoavaluació
 
-Format comú a `autoavaluacio/<assignatura>.json` (vegeu `autoavaluacio/_exemple.json`).
-Cada pregunta: enunciat, opcions, resposta correcta, **explicació** (també per a qui l'encerta)
-i, si n'hi ha, la simulació relacionada. L'app de Joan i la web poden llegir el mateix format.
+Format comú a `contingut/_plantilles/preguntes/preguntes.json`. Cada pregunta: enunciat,
+opcions, resposta correcta, **explicació** (també per a qui l'encerta) i, si n'hi ha, la
+simulació relacionada. L'app de Joan i la web poden llegir el mateix format.
 
 ## Notació
 

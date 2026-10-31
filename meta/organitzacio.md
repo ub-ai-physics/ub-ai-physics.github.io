@@ -19,7 +19,8 @@
 2. Fes el contingut seguint `guia-estil.md` (amb el projecte de Claude si vols).
 3. Obre una proposta (pull request). La plantilla et recorda les comprovacions, i GitHub
    comprova automàticament les dades (`scripts/comprova.py`).
-4. **Revisió nivell 1:** el grup responsable comprova la física. Si és correcta, aprova i
+4. **Revisió nivell 1:** coordinació assigna la proposta a algú del grup responsable
+   (botó *Reviewers*), que comprova la física. Si és correcta, aprova i
    canvia l'estat a `revisat` indicant qui ho ha revisat.
 5. **Revisió nivell 2:** l'Ulises o en Vincent comproven format, dades i enllaços i fan Merge.
    La web s'actualitza en un o dos minuts.

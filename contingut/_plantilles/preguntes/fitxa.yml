@@ -1,0 +1,8 @@
+# Fitxa d'un conjunt de preguntes d'autoavaluació.
+titol: Preguntes de Física Atòmica
+seccio: autoavaluacio
+assignatures: fisica-atomica
+fitxer: preguntes.json      # format: vegeu preguntes.json d'aquesta plantilla
+# enllac: https://...       # o un enllaç a una app externa d'autoavaluació
+autors: El teu nom
+estat: esborrany
